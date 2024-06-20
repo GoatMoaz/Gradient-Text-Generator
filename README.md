@@ -1,75 +1,59 @@
-# Nuxt 3 Minimal Starter
+## Getting Started
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+To run this project locally, follow these steps:
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/GoatMoaz/Gradient-Text-Generator.git
+    ```
+2. Navigate into the project directory:
+    ```bash
+    cd gradient-text-generator
+    ```
+3. Install depenedcies:
+    ```bash
+    # npm
+    npm install
 
-## Setup
+    # pnpm
+    pnpm install
 
-Make sure to install the dependencies:
+    # yarn
+    yarn install
 
-```bash
-# npm
-npm install
+    # bun
+    bun install
+    ```
+4. Start the development server:
+    ```bash
+    # npm
+    npm run dev
 
-# pnpm
-pnpm install
+    # pnpm
+    pnpm run dev
 
-# yarn
-yarn install
+    # yarn
+    yarn dev
 
-# bun
-bun install
-```
+    # bun
+    bun run dev
+    ```
+5. Open your web browser and visit http://localhost:3000 to see gradient text generator in action.
 
-## Development Server
+## Features
 
-Start the development server on `http://localhost:3000`:
+- **Custom Gradients**: Choose from a selection of pre-defined gradients or create your own custom gradients.
+- **Live Preview**: See how your gradient text will look in real-time as you make adjustments.
+- **Easy Copy**: Simple copy-to-clipboard functionality for quick and easy use of the generated code.
+- **CSS Output**: Provides the necessary CSS code to embed the gradient text into your projects.
 
-```bash
-# npm
-npm run dev
 
-# pnpm
-pnpm run dev
+## Technologies Used
 
-# yarn
-yarn dev
+- **Nuxt3.JS** - JavaScript framework for building user interfaces
+- **HTML/TailwindCSS** - Structure and styling the project
+- **JavaScript** - Main Logic for the whole project
+- **Markdown** - Documentation format
 
-# bun
-bun run dev
-```
+## Contributing
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Contributions are welcome! If you'd like to contribute to **gradient-text-generator**, please fork the repository, make your changes, and submit a pull request.
