@@ -3,10 +3,10 @@
     <div class="code-editor">
       <div class="header">
         <div v-if="clicked">
-          <Copy @click="copyCSS" />
+          <IconsCopy @click="copyCSS" color="white" size="1.8em"/>
         </div>
         <div v-else>
-          <Copied />
+          <IconsCopied size="1.8em"/>
         </div>
       </div>
       <div class="editor-content">

@@ -1,18 +1,25 @@
 <template>
-  <div class="min-h-screen bg-slate-100 flex items-start">
+  <div class="bg-slate-100 flex items-start">
     <div
-      class="bg-white p-6 rounded-lg shadow-lg w-1/3 max-w-5xl flex h-screen"
+      class="bg-white 2xl:p-6 xl:p-0 rounded-lg shadow-lg 2xl:w-1/3 xl:w-1/2 lg:w-full max-w-5xl flex min-h-screen"
     >
       <div class="flex-1 p-4">
         <h1 class="text-4xl font-bold text-gradient mb-4 text-center">
           Gradient Text Generator
         </h1>
         <p class="text-slate-500 mb-4 text-center">
-          Instantly create and embed stunning gradient texts using CSS or
-          HTML.<br />
+          Instantly create and embed stunning gradient texts using CSS.<br />
           Simple, efficient, and perfect for developers looking to enhance their
           projects.
         </p>
+        <div class="2xl:hidden lg:block">
+          <Sample
+            :copyCSS="copyCSS"
+            :text="text"
+            :gradientTextStyle="gradientTextStyle"
+            :clicked="clicked"
+          />
+        </div>
         <div>
           <label class="block text-slate-500 font-bold text-xl mb-2">
             Text
@@ -73,53 +80,28 @@
                 'cursor-not-allowed': colors.length <= 2,
               }"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                :class="{ 'cursor-not-allowed': colors.length <= 2 }"
-              >
-                <path
-                  fill="currentColor"
-                  d="M7 21q-.825 0-1.412-.587T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413T17 21zm2-4h2V8H9zm4 0h2V8h-2z"
-                />
-              </svg>
+              <IconsDelete :colors="colors" />
             </button>
           </div>
           <button
             @click="addColor"
             class="text-blue-500 mt-2 shadow-md flex justify-center items-center w-full px-2 py-4 rounded-lg gap-2"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M11 17h2v-4h4v-2h-4V7h-2v4H7v2h4zm1 5q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"
-              />
-            </svg>
+            <IconsAdd />
             NEW COLOR
           </button>
         </div>
       </div>
     </div>
     <div
-      class="flex-1 flex flex-col items-center justify-center p-4 h-screen gap-5"
+      class="2xl:flex lg:hidden flex-1 flex-col items-center justify-center p-4 h-screen gap-5"
     >
-      <div
-        class="bg-white px-20 py-10 text-4xl rounded-2xl shadow-lg text-center"
-      >
-        <div
-          class="text-6xl font-black text-center uppercase"
-          :style="gradientTextStyle"
-        >
-          {{ text }}
-        </div>
-      </div>
+      <Sample
+        :copyCSS="copyCSS"
+        :text="text"
+        :gradientTextStyle="gradientTextStyle"
+        :clicked="clicked"
+      />
       <Code
         :angle="angle"
         :colorsString="colorsString"
